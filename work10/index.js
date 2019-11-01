@@ -8,7 +8,7 @@ function monkey(){
         return
     }
     let monkey=[]
-    for (let i=1;i<=total;i++ ){
+    for (let i=1;i<=total;i++){
         monkey.push(i)
     }
     let i=0
@@ -21,3 +21,24 @@ function monkey(){
     }
     document.getElementById('monkeyking').innerText = monkey[0]
 }
+function stat(){
+    let str = document.getElementById("str").value
+    let obj = {}
+    
+}
+function stat(){
+    let str = document.getElementById("str").value
+    let obj = str.split("").sort()
+    let num = obj.reduce(function (allnum,obj){
+        if(obj in allnum){
+            allnum[obj]++;
+        }
+        else{
+            allnum[obj]=1;
+        }
+        return allnum;
+    },{});
+
+    document.getElementById('result').innerText = JSON.stringify(num)
+}
+    
