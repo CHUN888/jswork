@@ -1,12 +1,11 @@
-$('#toRight').click(function (){
-    $('#right>select').append($('#left>select>option:selected'));
+$('#fold>ul>li:first').find('.wrap').css({
+    dispiay: 'block'
 });
-$('#toLeft').click(function(){
-    $('#left>select').append($('#right>select>option:selected'));
-});
-$('#toAllRight').click(function (){
-    $('#right>select').append($('#left>select>option'));
-});
-$('#toAllLeft').click(function(){
-    $('#left>select').append($('#right>select>option'));
+$('#fold>ul>li').click(function(){
+    $(this).siblings('li').find('.wrap').css({
+        display: 'none'
+    });
+    $(this).find('.wrap').css({
+        display: 'block'
+    });
 });
